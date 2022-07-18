@@ -1943,7 +1943,7 @@ namespace IMGUIZMO_NAMESPACE
          vec_t intersectViewPos;
          intersectViewPos.TransformPoint(intersectWorldPos, gContext.mViewMat);
 
-         if (ImAbs(modelViewPos.z) - ImAbs(intersectViewPos.z) < -FLT_EPSILON)
+         if (abs((long)modelViewPos.z) - abs((long)intersectViewPos.z) < -FLT_EPSILON)
          {
             continue;
          }
